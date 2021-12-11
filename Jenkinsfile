@@ -52,8 +52,9 @@ pipeline {
                                  stage(" Deploy Image"){
             steps {
                 script {
-
-                                     sh "docker run -dit --name jenkins-pipeline -p 8085:8085 java:v1.0"
+			sh "docker kill jenkins-pipeline"
+                        sh "docker container rm jenkins-pipeline"
+			sh "docker run -dit --name jenkins-pipeline -p 8085:8085 java:v1.0"
                       
                 }
             }
