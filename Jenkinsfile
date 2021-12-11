@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
 
-                                     sh "docker run -dit --name jenkins-pipeline -p 8085:8082 java:v1.0"
+                                     sh "docker run -dit --name jenkins-pipeline -p 8085:8085 java:v1.0"
                       
                 }
             }
